@@ -1,126 +1,75 @@
-🔑 KeyInject - Remote Administration Tool
-⚠️ IMPORTANT: This tool is for educational and authorized penetration testing ONLY. You must have explicit written permission before using it on any system. Unauthorized access is illegal and unethical.
+# 🔑 KeyInject — Remote Administration Tool
 
-📋 Table of Contents
-Overview
-Features
-Architecture
-Command Reference
-Download
-Legal Disclaimer
-Author
-📌 Overview
-KeyInject is a feature-rich Remote Administration Tool (RAT) built for educational purposes and authorized penetration testing. It enables you to remotely control a target machine using keyboard injection, command execution, screen capture, and text-to-speech — all over a custom TCP socket connection.
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github" alt="Version">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows" alt="Platform">
+  <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python" alt="Language">
+  <img src="https://img.shields.io/badge/License-Educational-red?style=for-the-badge" alt="License">
+</p>
 
-🧠 Perfect for:
+---
 
-Red team assessments
-Security research & PoC development
-Learning about remote access trojans & C2 architecture
-✨ Features
+## 📌 Overview
 
+**KeyInject** is a feature-rich Remote Administration Tool (RAT) built exclusively for **educational purposes and authorized penetration testing**. It enables security professionals to remotely control a target machine using keyboard injection, command execution, screen capture, and text-to-speech capabilities over a secure, custom TCP socket connection.
 
-Feature	Description
-🎯 Key Press Injection	Simulate single key presses (win, enter, tab, etc.)
-⌨️ Keyboard Shortcuts	Execute hotkeys like win+d, alt+f4, ctrl+shift+esc
-✍️ Auto Type	Automatically type text on target machine
-🖥️ CMD Execution	Run system commands (cmd/PowerShell) on target
-🎙️ Text-to-Speech	Make target speak any text aloud
-📸 Screenshot Capture	Capture live screenshot of target screen
-🔐 Password Protection	Server requires password before accepting commands
-🗂️ One-File Executable	Build a standalone .exe via PyInstaller (no console window)
-🔄 Cross-Platform Server	Works on Windows & Linux
-🏗️ Architecture
+### 🧠 Core Use Cases
+* 🔴 **Red Team Assessments:** Simulating advanced user-interaction attacks.
+* 🔬 **Security Research:** Proof-of-Concept (PoC) development for input manipulation.
+* 📚 **Academic Learning:** Understanding Command & Control (C2) architecture and socket programming.
 
+---
 
+## ✨ Features
 
-┌─────────────────────┐         TCP Socket         ┌─────────────────────┐
-│                     │ ◄──────────────────────► │                     │
-│   🎮 Client (You)   │        ip:port            │   🖥️ Server (Target)│
-│                     │     password auth          │                     │
-│  - Send commands    │                            │  - Execute commands │
-│  - Receive output   │                            │  - Return results   │
-│  - Capture screens  │                            │  - Take screenshots │
-└─────────────────────┘                            └─────────────────────┘
-🎮 Command Reference
+| Category | Feature | Description |
+| :--- | :--- | :--- |
+| ⌨️ **Input Control** | Key Press Injection | Simulate single key presses (`win`, `enter`, `tab`, etc.) |
+| | Keyboard Shortcuts | Execute complex hotkeys like `win+d`, `alt+f4`, `ctrl+shift+esc` |
+| | Auto Type | Automatically stream and type long strings of text on the target |
+| 💻 **System Execution** | CMD/PowerShell | Execute native system commands directly with standard output return |
+| | Text-to-Speech | Invoke system audio to make the target speak any text aloud |
+| | Screenshot Capture | Live capture and transmission of the target's primary display |
+| 🔒 **Security & Build** | Password Protection | Server-side authentication required before accepting any payload |
+| | Standalone Binary | Compiled into a single `.exe` using PyInstaller (hidden console window) |
+| | Cross-Platform | Multi-OS compatibility supporting both Windows and Linux environments |
 
+---
 
-Command	Example	Description
-speak <text>	speak Hello from RAT	🔉 Target speaks the text aloud
-press <key>	press enter	⌨️ Press a single key (win, enter, tab, esc, shift, ctrl, alt, backspace, space, etc.)
-hotkey <k1>+<k2>	hotkey win+d	🔑 Execute keyboard shortcut
-write <text>	write Hello World	✍️ Type text automatically
-cmd <command>	cmd whoami	💻 Execute system command (cmd/PowerShell)
-ss	ss	📸 Capture screenshot (saved as screen.png)
-help	help	📖 Show help menu
-clear	clear	🧹 Clear terminal
-exit	exit	🚪 Disconnect and exit
-⌨️ Hotkey Examples
+## 🎮 Command Reference
 
+| Command | Syntax Example | Action / Description |
+| :--- | :--- | :--- |
+| `speak` | `speak Hello from RAT` | 🔉 Target plays the specified text via audio |
+| `press` | `press enter` | ⌨️ Injects a single keystroke |
+| `hotkey` | `hotkey win+d` | 🔑 Triggers multi-key combinations |
+| `write` | `write Hello World` | ✍️ Emulates realistic human typing on the target |
+| `cmd` | `cmd whoami` | 💻 Runs OS-level shell commands |
+| `ss` | `ss` | 📸 Takes a screenshot and saves/transfers it |
+| `help` | `help` | 📖 Displays the active terminal help menu |
+| `clear` | `clear` | 🧹 Wipes the current terminal screen clear |
+| `exit` | `exit` | 🚪 Gracefully terminates the connection and exits |
 
-Shortcut	Action
-win+d	Show desktop
-win+r	Open Run dialog
-alt+f4	Close active window
-ctrl+shift+esc	Task Manager
-win+l	Lock screen
-📥 Download
-🪟 Windows
-bash
+### 🛠️ Common Hotkey Combinations
 
+* `win+d` ➡️ Show/Hide Desktop
+* `win+r` ➡️ Open Run Dialog
+* `alt+f4` ➡️ Close Active Window
+* `ctrl+shift+esc` ➡️ Launch Task Manager
+* `win+l` ➡️ Lock Target Workstation
 
+---
 
+## 📥 Installation & Deployment
+
+### 🪟 Windows Setup
+```bash
 # Clone the repository
-git clone https://github.com/yourusername/KeyInject.git
-
-# Go to project directory
+git clone [https://github.com/yourusername/KeyInject.git](https://github.com/yourusername/KeyInject.git)
 cd KeyInject
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the builder
+# Build the executable
 python RAT_Builder.py
-🐧 Linux (Kali/Ubuntu)
-bash
-
-
-
-# Clone the repository
-git clone https://github.com/yourusername/KeyInject.git
-
-# Go to project directory
-cd KeyInject
-
-# Install dependencies
-pip3 install -r requirements.txt
-
-# For pyttsx3 on Linux (optional but recommended)
-sudo apt install espeak -y
-
-# Run the builder
-python3 RAT_Builder.py
-⚖️ Legal Disclaimer
-
-
-
-╔══════════════════════════════════════════════════════════════╗
-║  ⚠️  LEGAL DISCLAIMER                                        ║
-╠══════════════════════════════════════════════════════════════╣
-║  This tool is provided for EDUCATIONAL & AUTHORIZED          ║
-║  penetration testing purposes ONLY.                          ║
-║                                                              ║
-║  - Do NOT deploy on systems you do not own                   ║
-║  - Do NOT deploy without explicit written permission         ║
-║  - Unauthorized access is a CRIMINAL OFFENSE                 ║
-║  - The author assumes ZERO liability for misuse              ║
-║  - You are responsible for complying with all laws           ║
-╚══════════════════════════════════════════════════════════════╝
-👨‍💻 Author
-Akshat Rajput
-
-🔐 Security Researcher & Penetration Tester
-🛠️ Version: 1.2
-💻 Working OS: Windows / Linux
-⭐ Support
-If you find this project useful for your security research, give it a ⭐ on GitHub!
