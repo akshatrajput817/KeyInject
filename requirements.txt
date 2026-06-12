@@ -1,0 +1,6 @@
+pyautogui
+pyttsx3
+pyfiglet
+rich
+pillow
+pyinstaller

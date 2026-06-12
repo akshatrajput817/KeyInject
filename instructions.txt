@@ -1,0 +1,60 @@
+================================================================
+        Remote Access Generator (RAG) - v1.2
+        Made By : Akshat Rajput
+================================================================
+
+⚠️  IMPORTANT NOTICE - READ BEFORE USE  ⚠️
+
+This tool is strictly for EDUCATIONAL and AUTHORIZED TESTING purposes only.
+
+----------------------------------------------------------------
+✅ ALLOWED USE :
+----------------------------------------------------------------
+
+  - Testing on your OWN devices
+  - Authorized penetration testing environments
+  - Educational and learning purposes
+  - Cybersecurity research with proper permission
+
+----------------------------------------------------------------
+❌ NOT ALLOWED :
+----------------------------------------------------------------
+
+  - Using on someone else's device WITHOUT permission
+  - Unauthorized access to any computer or network
+  - Any illegal or unethical activity
+  - Distribution for malicious purposes
+
+----------------------------------------------------------------
+📌 BEFORE RUNNING :
+----------------------------------------------------------------
+
+  1. Make sure you OWN the target device
+  2. Install all required modules :
+         pip install -r requirements.txt
+  3. Run RAT_Generator.py to create RAT.exe
+  4. Run RAT.exe on YOUR device
+  5. Connect using Remote Access file
+
+----------------------------------------------------------------
+⚖️  LEGAL WARNING :
+----------------------------------------------------------------
+
+  Unauthorized access to computer systems is a criminal offense
+  and may result in :
+
+  - Heavy fines
+  - Imprisonment
+  - Legal action
+
+  The developer is NOT responsible for any misuse,
+  damage, or legal consequences.
+
+----------------------------------------------------------------
+  By using this tool, you agree to use it RESPONSIBLY,
+  ETHICALLY and in compliance with ALL applicable laws.
+----------------------------------------------------------------
+
+================================================================
+        Use Wisely. Use Ethically. Use Legally.
+================================================================
