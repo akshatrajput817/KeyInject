@@ -60,16 +60,49 @@
 
 ---
 
-## 📥 Installation & Deployment
+## 📥 Deployment & Operational Guidelines
 
-### 🪟 Windows Setup
 ```bash
+# ==========================================
+# 🪟 WINDOWS INSTALLATION ENVIRONMENT
+# ==========================================
 # Clone the repository
 git clone [https://github.com/yourusername/KeyInject.git](https://github.com/yourusername/KeyInject.git)
 cd KeyInject
 
-# Install dependencies
+# Install required dependencies
 pip install -r requirements.txt
 
-# Build the executable
+# Compile standalone executable (hidden console)
 python RAT_Builder.py
+
+
+# ==========================================
+# 🐧 LINUX INSTALLATION ENVIRONMENT
+# ==========================================
+# System update and native audio engine setup (Required for Text-to-Speech)
+sudo apt update && sudo apt install espeak -y
+
+# Deploy environment packages
+pip3 install -r requirements.txt
+
+# Launch C2 framework controller
+python3 RAT_Builder.py
+
+
+# ==========================================
+# ⚠️ IMPORTANT NOTICE & LEGAL COVENANT
+# ==========================================
+# 🏫 ACADEMIC ALIGNMENT: This architecture is engineered exclusively for cybersecurity 
+#    research, authorized red-team simulations, and defense validation.
+#
+# 🚫 AUTHORIZATION MANDATORY: Deployment on any target network/device without explicit,
+#    written cryptographic or contractual consent is strictly illegal worldwide.
+#
+# ⚡ COMPLIANCE: Usage must strictly adhere to international cyber security guidelines,
+#    including the IT Act and Computer Fraud and Abuse Act (CFAA).
+#
+# 🛡️ LIABILITY WAIVER: The developer holds absolute zero responsibility for system downtime,
+#    legal operations, data exposure, or administrative damages caused by tool misuse.
+#
+# BY CLONING THIS ARCHITECTURE, YOU AGREE TO TAKE 100% LEGAL & OPERATIONAL LIABILITY.
