@@ -1,10 +1,10 @@
 # 🔑 KeyInject — Remote Administration Tool
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github" alt="Version">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows" alt="Platform">
-  <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python" alt="Language">
-  <img src="https://img.shields.io/badge/License-Educational-red?style=for-the-badge" alt="License">
+  <img src="[https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github](https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github)" alt="Version">
+  <img src="[https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows)" alt="Platform">
+  <img src="[https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)" alt="Language">
+  <img src="[https://img.shields.io/badge/License-Educational-red?style=for-the-badge](https://img.shields.io/badge/License-Educational-red?style=for-the-badge)" alt="License">
 </p>
 
 ---
@@ -83,13 +83,14 @@ python RAT_Builder.py
 # System update and native audio engine setup (Required for Text-to-Speech)
 sudo apt update && sudo apt install espeak -y
 
+# Clone the repository and install packages
 git clone https://github.com/akshatrajput817/KeyInject.git
-
-# Deploy environment packages
+cd KeyInject
 pip3 install -r requirements.txt
 
 # Launch C2 framework controller
 python3 RAT_Builder.py
+ ```
 
 ⚠️ Disclaimer
 📚 Educational Purposes Only: This tool is developed strictly for learning cyber security, ethical hacking research, and authorized defensive testing.
