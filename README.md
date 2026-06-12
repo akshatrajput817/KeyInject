@@ -67,7 +67,7 @@
 # 🪟 WINDOWS INSTALLATION ENVIRONMENT
 # ==========================================
 # Clone the repository
-git clone [https://github.com/yourusername/KeyInject.git](https://github.com/yourusername/KeyInject.git)
+git clone https://github.com/akshatrajput817/KeyInject.git
 cd KeyInject
 
 # Install required dependencies
@@ -83,26 +83,19 @@ python RAT_Builder.py
 # System update and native audio engine setup (Required for Text-to-Speech)
 sudo apt update && sudo apt install espeak -y
 
+git clone https://github.com/akshatrajput817/KeyInject.git
+
 # Deploy environment packages
 pip3 install -r requirements.txt
 
 # Launch C2 framework controller
 python3 RAT_Builder.py
 
+⚠️ Disclaimer
+📚 Educational Purposes Only: This tool is developed strictly for learning cyber security, ethical hacking research, and authorized defensive testing.
 
-# ==========================================
-# ⚠️ IMPORTANT NOTICE & LEGAL COVENANT
-# ==========================================
-# 🏫 ACADEMIC ALIGNMENT: This architecture is engineered exclusively for cybersecurity 
-#    research, authorized red-team simulations, and defense validation.
-#
-# 🚫 AUTHORIZATION MANDATORY: Deployment on any target network/device without explicit,
-#    written cryptographic or contractual consent is strictly illegal worldwide.
-#
-# ⚡ COMPLIANCE: Usage must strictly adhere to international cyber security guidelines,
-#    including the IT Act and Computer Fraud and Abuse Act (CFAA).
-#
-# 🛡️ LIABILITY WAIVER: The developer holds absolute zero responsibility for system downtime,
-#    legal operations, data exposure, or administrative damages caused by tool misuse.
-#
-# BY CLONING THIS ARCHITECTURE, YOU AGREE TO TAKE 100% LEGAL & OPERATIONAL LIABILITY.
+🚫 Strictly No Misuse: Any unauthorized deployment, usage on systems you do not own, or actions without explicit written permission from the owner are strictly prohibited.
+
+🛑 Stay Within the Law: Accessing or controlling systems without consent is a cyber crime. Always ensure your testing complies with your local and international laws.
+
+🤝 Your Responsibility: You are completely responsible for your own actions. The author assumes absolute zero liability for any misuse, damage, or legal issues caused by this software.
