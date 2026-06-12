@@ -1,10 +1,10 @@
 # 🔑 KeyInject — Remote Administration Tool
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github](https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github)" alt="Version">
-  <img src="[https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows)" alt="Platform">
-  <img src="[https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)" alt="Language">
-  <img src="[https://img.shields.io/badge/License-Educational-red?style=for-the-badge](https://img.shields.io/badge/License-Educational-red?style=for-the-badge)" alt="License">
+  <img src="https://img.shields.io/badge/Version-v1.2-blue?style=for-the-badge&logo=github" alt="Version">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge&logo=windows" alt="Platform">
+  <img src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python" alt="Language">
+  <img src="https://img.shields.io/badge/License-Educational-red?style=for-the-badge" alt="License">
 </p>
 
 ---
@@ -85,18 +85,17 @@ sudo apt update && sudo apt install espeak -y
 
 # Clone the repository and install packages
 git clone https://github.com/akshatrajput817/KeyInject.git
-cd KeyInject
 pip3 install -r requirements.txt
 
 # Launch C2 framework controller
 python3 RAT_Builder.py
- ```
+```
+##⚠️ Disclaimer
 
-⚠️ Disclaimer
-📚 Educational Purposes Only: This tool is developed strictly for learning cyber security, ethical hacking research, and authorized defensive testing.
+📚 **Educational Purposes Only:** This tool is developed strictly for learning cyber security, ethical hacking research, and authorized defensive testing.
 
-🚫 Strictly No Misuse: Any unauthorized deployment, usage on systems you do not own, or actions without explicit written permission from the owner are strictly prohibited.
+🚫 **Strictly No Misuse:** Any unauthorized deployment, usage on systems you do not own, or actions without explicit written permission from the owner are strictly prohibited.
 
-🛑 Stay Within the Law: Accessing or controlling systems without consent is a cyber crime. Always ensure your testing complies with your local and international laws.
+🛑 **Stay Within the Law:** Accessing or controlling systems without consent is a cyber crime. Always ensure your testing complies with your local and international laws.
 
-🤝 Your Responsibility: You are completely responsible for your own actions. The author assumes absolute zero liability for any misuse, damage, or legal issues caused by this software.
+🤝 **Your Responsibility:** You are completely responsible for your own actions. The author assumes absolute zero liability for any misuse, damage, or legal issues caused by this software.
