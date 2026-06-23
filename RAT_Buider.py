@@ -78,4 +78,3 @@ if run == "y":
     print("[bold green]For connecting ot the target device run the Remote Access file[/bold green]")
 
           
-
