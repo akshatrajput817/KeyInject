@@ -75,9 +75,19 @@ if run == "y":
     time.sleep(1)
     print("[bold yellow]Use Only for educational purpose[/bold yellow]")
     time.sleep(1)
-    print("""[bold blue]Made By : Akshat Rajput[/bold blue]                                [bold blue]Version : v1.2[/bold blue]""")
+    print("""[bold blue]Made By : Akshat Rajput[/bold blue]                                [bold blue]Version : v1.5[/bold blue]""")
     time.sleep(1)
     print("[bold blue]Working OS : Windows/Linux[/bold blue]")
+    print("")
+    print("[bold red]GitHub:[/bold red]")
+    print("[bold blue]https://github.com/akshatrajput817/[/bold blue]\n")
+
+    print("[bold red]LinkedIn:[/bold red]")
+    print("[bold blue]https://www.linkedin.com/in/akshat-rajput-53429b396/[/bold blue]\n")
+
+    print("[bold red]YouTube Channel:[/bold red]")
+    print("[bold blue]https://www.youtube.com/channel/UCO8Cf8Rg9VZG8wz0pfdI64A[/bold blue]")
+    print("")
     time.sleep(1)
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ip_input =  str(console.input("[bold red]Enter The Target Ip : [/bold red]"))
@@ -133,6 +143,7 @@ if run == "y":
                 if cmd.startswith("hotkey"):
                     output3 = client.recv(1024).decode("utf-8")
                     print(f"[bold green]{output3}[bold green]")
+                    # speak
                 if cmd.startswith("speak"):
                     output4 = client.recv(1024).decode("utf-8")
                     print(f"[bold green]{output4}[bold green]")
