@@ -2,7 +2,6 @@ import socket
 import io
 from rich import print
 import pyfiglet
-import pyttsx3
 import time
 import os
 import random
@@ -11,17 +10,16 @@ time.sleep(1)
 console = Console()
 
 disclaimer = """
-╔══════════════════════════════════════════════════════════════╗
-║  ⚠️  DISCLAIMER                                              ║
-╠══════════════════════════════════════════════════════════════╣
-║  This tool is for EDUCATIONAL & AUTHORIZED testing ONLY.     ║
-║  Do NOT deploy on systems you don't own or lack explicit     ║
-║  permission to test. Unauthorized use is ILLEGAL.            ║
-╚══════════════════════════════════════════════════════════════╝
+
+⚠️  DISCLAIMER                                              
+
+  This tool is for EDUCATIONAL & AUTHORIZED testing ONLY.     
+  Do NOT deploy on systems you don't own or lack explicit     
+  permission to test. Unauthorized use is ILLEGAL.            
+
 """
 
 print(f"[red]{disclaimer}[/red]")
-pyttsx3.speak(disclaimer)
 time.sleep(1)
 
 run = str(input("Do you want to run this tool (y/n) : ")).lower()
@@ -80,3 +78,4 @@ if run == "y":
     print("[bold green]For connecting ot the target device run the Remote Access file[/bold green]")
 
           
+
